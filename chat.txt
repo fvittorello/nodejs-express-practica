@@ -1,0 +1,20 @@
+Consigna Landing para Evento
+Crea una landing page para un evento de tecnología.Los visitantes deben tener la posibilidad de inscribirse, no puede haber emails repetidos y no son aceptados los emails @hotmail.com, @gmail.com y @yahoo.com.
+
+El desarrollo debe contar con una sección de administración privada que le permita ver al organizador quienes están registrados en su evento.
+
+Planificación
+Tendrán 15 minutos para planificar su proyecto.Algunos objetivos que deben resultar de la planificación-Realizar un boceto-Planificar el alcance-Dividir roles del equipo
+
+- Endpoints
+
+    - Inscripcion (POST)
+
+    - Administración (GET)
+
+
+- Recursos (imagenes, referencias, etc)
+
+    - undraw.co/    (Ilustraciones gratuitas)
+    - https://www.pexels.com/es-es/ (banco de imagenes gratuitas)
+
