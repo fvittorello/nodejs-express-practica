@@ -18,3 +18,13 @@ Tendrán 15 minutos para planificar su proyecto.Algunos objetivos que deben resu
     - undraw.co/    (Ilustraciones gratuitas)
     - https://www.pexels.com/es-es/ (banco de imagenes gratuitas)
 
+
+
+
+Database
+ - tecnopelis
+
+    - Insert usuarios (mail y contrasenia)
+    - Verificar que no haya mails repetidos en la debe
+    - Delete de usuarios (mail y contrasenia) solo para admins
+    

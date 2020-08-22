@@ -1,69 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-    background: #ccc;
+	background: #eee;
+}
+
+li {
+	list-style: none;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: center;
+}
+
+.logo img {
+	width: auto;
+	height: 130px;
+}
+
+.hidden {
+	display: none;
+}
+
+.formulario {
+	display: flex;
+	justify-content: center;
+	width: 350px;
+	margin: auto;
+}
+
+.login-form {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	width: 350px;
+	color: #000;
+	background: #e4e4e4;
+	padding: 2em;
+	z-index: 2;
+	border-radius: 3px;
+	border: solid 2px #bfbfbf;
+}
+
+.login-form input::placeholder {
+	color: #d6d6d6;
+}
+
+.titulo {
+	color: black;
+}
+.asistir {
+	color: white;
 }
 .hidden {
-    display: none;
-}
-
-form {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    width: 20%;
-    /* background:src('..\assets\images\1_o0SR0QrsG8mr8Evrhpvi5Q.png'); */
-
-    position: absolute;
-    background: #222222;
-}
-
-.titulo{
-    color:white;
-}
-.asistir{
-    color:white;
-}
-.hidden {
-    display: none;
-    z-index: 2;
-}
-
-form {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    width: 19%;
-    background: darkcyan;
-    color: white;
-    padding: 2em;
-    z-index: 2;
+	display: none;
+	z-index: 2;
 }
 
 .button-registrarse {
-    padding: 1em 2em;
-    background-color: darkblue;
-    color: white;
-    z-index: 2;
+	padding: 1em 2em;
+	background-color: darkblue;
+	color: white;
+	z-index: 2;
 }
-.fondo{
-    z-index: 0;
-    width: 100%;
+.fondo {
+	z-index: 0;
+	width: 100%;
 }
 
-.seccion_1{
-    position: absolute;
-    background-color: black;
-    color: white;
-    padding: 2em;
-    z-index: 2;
+.seccion-1 {
+	position: absolute;
+	background-color: black;
+	color: white;
+	padding: 2em;
+	z-index: 2;
 }
 
 .button-registrarse {
-    padding: 1em 2em;
-    background-color: darkblue;
-    color: white;
-    z-index: 2;
+	padding: 1em 2em;
+	background-color: darkblue;
+	color: white;
+	z-index: 2;
 }
-.fondo{
-    z-index: 0;
-    width: 100%;
+.fondo {
+	z-index: 0;
+	width: 100%;
 }
