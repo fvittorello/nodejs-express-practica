@@ -90,3 +90,10 @@ li {
 	z-index: 0;
 	width: 100%;
 }
+
+/* ADMIN HTML */
+.form-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 300px;
+}
