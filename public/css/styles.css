@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #eee;
 }
@@ -72,17 +76,14 @@ li {
 }
 
 .seccion-1 {
-	position: absolute;
-	background-color: black;
-	color: white;
+	background-color: #cccccc;
 	padding: 2em;
-	z-index: 2;
+	min-height: 100vh;
 }
 
 .button-registrarse {
 	padding: 1em 2em;
-	background-color: darkblue;
-	color: white;
+	background-color: #4b4bd6;
 	z-index: 2;
 }
 .fondo {

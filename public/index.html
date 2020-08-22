@@ -5,22 +5,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logos/favicon.ico" />
 		<title>Tecnopelis</title>
 	</head>
 	<body>
 		<nav>
 			<ul class="nav-bar">
-				<li class="logo">
-					<a class="rombo" href="#"><img src="./assets/images/logos/nodeconf.png" alt="node conf logo" /></a>
-				</li>
+				<li><a href="#">Tecnopelis 2020</a></li>
+				<li><a href="#conf-section">Conferencias</a></li>
+				<li><a href="#speakers-section">Oradores</a></li>
+				<li><a href="#admin">Ingresar</a></li>
 			</ul>
 		</nav>
-		<h1 class="titulo">Evento de tecnologia 2020</h1>
 		<section class="seccion-1">
+			<h1 class="titulo">Tecnopelis</h1>
+			<h3>
+				Tecnopelis is the first international event focused on the entire Node.js ecosystem. It’s a non-profit event,
+				where our attendees will be sharing in an environment of inclusion and respect, having access to relevant
+				information through talks, workshops, and great experiences with the Argentinian Node community.
+			</h3>
+			<button class="button"><a href="#users-form">Registrate</a></button>
 			<p class="asistir">Para asistir registrate</p>
 			<button id="boton_ingresar" class="button-registrarse">Registrate</button>
 		</section>
-		<section class="formulario row justify-content-center">
+		<section id="users-form" class="formulario row justify-content-center">
 			<form id="form-registrarse" class="hidden login-form">
 				<div class="form-group">
 					<label for="firstname_input">Nombre</label>
