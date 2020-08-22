@@ -5,7 +5,7 @@ CREATE TABLE users(
     firstname VARCHAR(150) NOT NULL,
     lastname VARCHAR(150) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    password VARCHAR(30) NOT NULL,
+    password VARCHAR(150) NOT NULL,
     is_admin BOOLEAN NOT NULL DEFAULT false,
     is_disabled BOOLEAN NOT NULL DEFAULT false,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
