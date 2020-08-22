@@ -23,19 +23,29 @@
 		<section class="formulario row justify-content-center">
 			<form id="form-registrarse" class="hidden login-form">
 				<div class="form-group">
+					<label for="firstname">Nombre</label>
+					<input type="text" class="form-control" id="firstname" placeholder="Pepe" />
+				</div>
+
+				<div class="form-group">
+					<label for="lastname">Apellido</label>
+					<input type="text" class="form-control" id="lastname" placeholder="Perez" />
+				</div>
+
+				<div class="form-group">
 					<label for="email_input">Email</label>
 					<input
 						type="email"
 						class="form-control"
 						id="email_input"
-						placeholder="nombre@mail.com"
+						placeholder="pepe@mail.com"
 						aria-describedby="emailHelp"
 					/>
 				</div>
 
 				<div class="form-group">
 					<label for="contrasenia">Contraseña</label>
-					<input type="password" class="form-control" id="contrasenia" placeholder="Nombre Apellido" />
+					<input type="password" class="form-control" id="contrasenia" placeholder="********" />
 				</div>
 
 				<button type="submit" id="submit-user" class="btn btn-primary">Enviar</button>
