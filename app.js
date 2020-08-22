@@ -34,12 +34,17 @@ app.post('/registrarse', (req, res) => {
 	try {
 		let data = req.body; // nombre: algo, email: algo@algo.com
 		console.log(data);
-		db.query('INSERT INTO usuarios (mail, contrasenia) VALUES (:email, :contrasenia)', {
-			replacements: {
-				email: data.email,
-				contrasenia: data.contrasenia,
-			},
-		});
+		db.query(
+			'INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)',
+			{
+				replacements: {
+					firstname: data.firstname,
+					lastname: data.lastname,
+					email: data.email,
+					password: data.password,
+				},
+			}
+		);
 		// participantes.pushParticipantes(data);
 		res.status(200).json({ message: 'usuario creado' });
 	} catch (err) {

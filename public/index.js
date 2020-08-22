@@ -1,16 +1,20 @@
 const boton = document.querySelector('#boton_ingresar');
 const formulario = document.querySelector('#form-registrarse');
-const enviar = document.querySelector('#submit-user');
+const firstnameInput = document.querySelector('#firstname_input');
+const lastnameInput = document.querySelector('#lastname_input');
 const emailInput = document.querySelector('#email_input');
-const passwordInput = document.querySelector('#contrasenia');
+const passwordInput = document.querySelector('#password_input');
+const submitUserForm = document.querySelector('#submit_user');
 
-enviar.addEventListener('click', (e) => {
+submitUserForm.addEventListener('click', (e) => {
 	e.preventDefault();
+	const firstname = firstnameInput.value;
+	const lastname = lastnameInput.value;
 	const email = emailInput.value;
-	const contrasenia = passwordInput.value;
-	const data = { email, contrasenia };
+	const password = passwordInput.value;
+	const userData = { firstname, lastname, email, password };
 
-	nuevoUsuario(data);
+	nuevoUsuario(userData);
 });
 
 function toggleVisibility(tag) {
@@ -21,13 +25,13 @@ function toggleVisibility(tag) {
 	}
 }
 
-function nuevoUsuario(data) {
+function nuevoUsuario(userData) {
 	// const formData = new FormData();
 	// formData.append('file', userGifBlob, 'myGif.gif');
 
 	const parameters = {
 		method: 'POST',
-		body: JSON.stringify(data),
+		body: JSON.stringify(userData),
 		json: true,
 		headers: {
 			'Content-Type': 'application/json',
