@@ -17,19 +17,27 @@
 				<li><a href="#admin">Ingresar</a></li>
 			</ul>
 		</nav>
-		<section class="seccion-1">
-			<h1 class="titulo">Tecnopelis</h1>
-			<h3>
-				Tecnopelis is the first international event focused on the entire Node.js ecosystem. It’s a non-profit event,
-				where our attendees will be sharing in an environment of inclusion and respect, having access to relevant
-				information through talks, workshops, and great experiences with the Argentinian Node community.
-			</h3>
-			<button class="button"><a href="#users-form">Registrate</a></button>
+		<section id="home-section" class="seccion-1">
+			<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+				<main role="main" class="inner cover">
+					<h1 class="cover-heading">Tecnopelis 2020</h1>
+					<p class="lead">
+						Tecnopelis is the first international event focused on the entire Node.js ecosystem. It’s a non-profit
+						event, where our attendees will be sharing in an environment of inclusion and respect, having access to
+						relevant information through talks, workshops, and great experiences with the Argentinian Node community.
+					</p>
+					<p class="lead">
+						<a href="#users-form" class="btn btn-lg btn-secondary">Registrate</a>
+					</p>
+				</main>
+			</div>
+
 			<p class="asistir">Para asistir registrate</p>
 			<button id="boton_ingresar" class="button-registrarse">Registrate</button>
 		</section>
+
 		<section id="users-form" class="formulario row justify-content-center">
-			<form id="form-registrarse" class="hidden login-form">
+			<form id="form-registrarse" class="login-form">
 				<div class="form-group">
 					<label for="firstname_input">Nombre</label>
 					<input type="text" class="form-control" id="firstname_input" placeholder="Pepe" />
@@ -59,6 +67,14 @@
 				<button type="submit" id="submit_user" class="btn btn-primary">Enviar</button>
 			</form>
 		</section>
+
+		<footer class="mastfoot mt-auto text-center">
+			<div class="inner">
+				<p>
+					Tecnopelis 2020
+				</p>
+			</div>
+		</footer>
 
 		<script src="./vendors/js/jquery.min.js"></script>
 		<script src="./vendors/js/bootstrap.bundle.min.js"></script>
