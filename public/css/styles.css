@@ -20,27 +20,12 @@ li {
 	justify-content: center;
 }
 
-.logo img {
-	width: auto;
-	height: 130px;
-}
-
-.hidden {
-	display: none;
-}
-
-.formulario {
-	display: flex;
-	justify-content: center;
-	width: 350px;
-	margin: auto;
-}
-
 .login-form {
 	display: flex;
 	align-content: center;
 	flex-direction: column;
 	width: 350px;
+	height: 460px;
 	color: #000;
 	background: #e4e4e4;
 	padding: 2em;
@@ -50,45 +35,35 @@ li {
 }
 
 .login-form input::placeholder {
-	color: #d6d6d6;
+	color: #cecece;
 }
 
-.titulo {
-	color: black;
-}
-.asistir {
-	color: white;
-}
-.hidden {
-	display: none;
-	z-index: 2;
-}
-
-.button-registrarse {
-	padding: 1em 2em;
-	background-color: darkblue;
-	color: white;
-	z-index: 2;
-}
-.fondo {
-	z-index: 0;
-	width: 100%;
-}
-
-.seccion-1 {
+.home-section {
 	background-color: #cccccc;
 	padding: 2em;
 	min-height: 100vh;
 }
 
-.button-registrarse {
-	padding: 1em 2em;
-	background-color: #4b4bd6;
-	z-index: 2;
+.register-section {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background-color: #cccccc;
+	padding: 2em;
+	min-height: 100vh;
 }
-.fondo {
-	z-index: 0;
-	width: 100%;
+
+/* Utilities */
+.hidden {
+	display: none;
+}
+
+.center {
+	margin: auto;
+}
+
+.tb30 {
+	margin: 140px 0;
 }
 
 /* ADMIN HTML */
