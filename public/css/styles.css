@@ -20,24 +20,6 @@ li {
 	justify-content: center;
 }
 
-.login-form {
-	display: flex;
-	align-content: center;
-	flex-direction: column;
-	width: 350px;
-	height: 460px;
-	color: #000;
-	background: #e4e4e4;
-	padding: 2em;
-	z-index: 2;
-	border-radius: 3px;
-	border: solid 2px #bfbfbf;
-}
-
-.login-form input::placeholder {
-	color: #cecece;
-}
-
 .home-section {
 	background-color: #cccccc;
 	padding: 2em;
@@ -49,8 +31,25 @@ li {
 	justify-content: center;
 	align-content: center;
 	background-color: #cccccc;
-	padding: 2em;
 	min-height: 100vh;
+}
+
+.login-form {
+	display: flex;
+	align-self: center;
+	align-content: center;
+	flex-direction: column;
+	width: 450px;
+	height: 460px;
+	color: #000;
+	background: #e4e4e4;
+	padding: 2em;
+	border-radius: 3px;
+	border: solid 2px #bfbfbf;
+}
+
+.login-form input::placeholder {
+	color: #cecece;
 }
 
 /* Utilities */

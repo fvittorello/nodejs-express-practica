@@ -14,6 +14,11 @@ submitUserForm.addEventListener('click', (e) => {
 	const password = passwordInput.value;
 	const userData = { firstname, lastname, email, password };
 
+	firstnameInput.value = '';
+	lastnameInput.value = '';
+	emailInput.value = '';
+	passwordInput.value = '';
+
 	nuevoUsuario(userData);
 });
 
