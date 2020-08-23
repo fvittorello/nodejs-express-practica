@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize');
+const dotenv = require('dotenv').config();
 
-const sequelize = new Sequelize('mysql://root:@localhost:3306/tecnopelis');
+const sequelize = new Sequelize(process.env.DB_CONNECTION);
 
 module.exports = sequelize;
