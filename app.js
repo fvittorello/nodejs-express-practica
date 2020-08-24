@@ -13,6 +13,8 @@ app.use(cors());
 
 //Endpoints
 const usersRoute = require('./routes/users');
+const loginRoute = require('./routes/login');
+app.use('/login', loginRoute);
 app.use('/users', usersRoute);
 
 app.get('/', (req, res) => {
