@@ -3,6 +3,7 @@ const sequelize = require('../db');
 const { QueryTypes } = require('sequelize');
 const { validateAdminDB } = require('../services/dbValidation.services');
 const { validateToken } = require('../services/jwt.services');
+const { hashPass, comparePass } = require('../services/passEncryption');
 
 router.get('/', validateToken, async (req, res) => {
 	try {
@@ -19,6 +20,7 @@ router.get('/', validateToken, async (req, res) => {
 
 router.post('/', async (req, res) => {
 	const { firstname, lastname, email, password } = req.body;
+	const encrypted = hashPass(password);
 	try {
 		const query = await sequelize.query(
 			'INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)',
@@ -27,7 +29,7 @@ router.post('/', async (req, res) => {
 					firstname,
 					lastname,
 					email,
-					password,
+					password: encrypted,
 				},
 			}
 		);
