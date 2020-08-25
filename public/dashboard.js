@@ -10,12 +10,44 @@ function createRow(data) {
     <td>${firstname}</td>
     <td>${lastname}</td>
     <td>${email}</td>
-    <td>${is_admin}</td>
-    <td>${is_disabled}</td>
-    <td>${created_at}</td>
-    <td>${updated_at}</td>
+    <td>${!!is_admin}</td>
+    <td>${!!is_disabled}</td>
+    <td>${new Date(created_at)}</td>
+    <td>${new Date(updated_at)}</td>
 </tr>
 `;
 
 	usersTable.appendChild(tr);
 }
+
+function wipePreviousResults() {
+	usersTable.innerHTML = '';
+}
+
+function fetchUsers() {
+	const adminData = sessionStorage.getItem('token');
+	const params = {
+		method: 'GET',
+		json: true,
+		headers: {
+			authorization: `Bearer ${adminData}`,
+			'Content-Type': 'application/json',
+		},
+	};
+	fetch('/users', params)
+		.then((r) => {
+			console.log(r);
+			return r.json();
+		})
+		.then((users) => {
+			wipePreviousResults();
+			users.forEach((user) => {
+				createRow(user);
+			});
+		})
+		.catch((err) => {
+			console.error(err);
+		});
+}
+
+fetchUsers();

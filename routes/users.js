@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
 					firstname,
 					lastname,
 					email,
-					password: encrypted,
+					password,
 				},
 			}
 		);
