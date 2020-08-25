@@ -12,12 +12,8 @@ async function validateToken(req, res, next) {
 
 	try {
 		const validation = jwt.verify(token, process.env.JWT_SIGNATURE);
-		console.log('Token valido');
-		console.log(validation);
-
 		next();
 	} catch (err) {
-		console.log(`No se verifico correctamente el token jwt, ${err}`);
 		res.status(401).send('Usuario sin autorización o token expirado');
 	}
 }

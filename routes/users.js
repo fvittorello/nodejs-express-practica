@@ -4,23 +4,23 @@ const { QueryTypes } = require('sequelize');
 const { validateAdminDB } = require('../services/dbValidation.services');
 const { validateToken } = require('../services/jwt.services');
 
-router.get('/', validateToken, (req, res) => {
-	sequelize
-		.query('SELECT * FROM users', { type: sequelize.QueryTypes.SELECT })
-		.then((results) => {
-			res.status(200).send(results);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).send('Hubo un problema con la busqueda de usuarios');
-		});
+router.get('/', validateToken, async (req, res) => {
+	try {
+		const results = await sequelize.query(
+			'SELECT user_id, firstname, lastname, email, is_admin, is_disabled, created_at, updated_at FROM users',
+			{ type: sequelize.QueryTypes.SELECT }
+		);
+		res.status(200).send(results);
+	} catch (err) {
+		console.log(err);
+		res.status(500).send('Hubo un problema con la busqueda de usuarios');
+	}
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
 	const { firstname, lastname, email, password } = req.body;
-
-	sequelize
-		.query(
+	try {
+		const query = await sequelize.query(
 			'INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)',
 			{
 				replacements: {
@@ -30,20 +30,17 @@ router.post('/', (req, res) => {
 					password,
 				},
 			}
-		)
-		.then(() => {
-			res.status(201).send(`Gracias por registrarte ${req.body.firstname}`);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).send('Hubo un error y no se pudo registrar el usuario :(');
-		});
+		);
+
+		res.status(201).send(`Gracias por registrarte ${firstname}`);
+	} catch (err) {
+		console.log(err);
+		res.status(500).send('Hubo un error y no se pudo registrar el usuario :(');
+	}
 });
 
 router.patch('/', validateToken, validateAdminDB, async (req, res) => {
 	const { is_admin_cambio, user_id_cambio } = req.body;
-	console.log(is_admin_cambio, user_id_cambio);
-
 	try {
 		const algo = await sequelize.query('UPDATE users SET is_admin = :is_admin_cambio WHERE user_id = :user_id_cambio', {
 			replacements: {
@@ -52,11 +49,10 @@ router.patch('/', validateToken, validateAdminDB, async (req, res) => {
 			},
 		});
 
-		console.log(`Esto es algo ${algo}`);
-
 		res.status(200).send(`Se han cambiado los permisos de Admin del usuario ${user_id_cambio} a ${is_admin_cambio}`);
 	} catch (err) {
 		console.log(err);
+		res.status(400).send(`No se ha podido actualizar el usuario ${user_id_cambio}`);
 	}
 });
 

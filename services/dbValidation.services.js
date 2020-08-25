@@ -12,18 +12,14 @@ const validateAdminDB = async (req, res, next) => {
 			type: QueryTypes.SELECT,
 		});
 
-		console.log(admin);
 		const { is_admin } = admin[0];
-		console.log(`El valor de const admin es ${!!is_admin}`);
 
 		if (is_admin) {
-			console.log('condition ok');
 			return next();
 		}
 
 		res.status(401).send(`El usuario ${user_id} no tiene permisos de Admin en la base de datos`);
 	} catch (err) {
-		console.log(err);
 		res.status(401).send('Hubo un error en la validación con la base de datos, ' + err);
 	}
 };
