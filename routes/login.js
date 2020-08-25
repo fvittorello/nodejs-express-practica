@@ -11,8 +11,8 @@ router.post('/', async (req, res) => {
 			'SELECT user_id, firstname, email, is_admin FROM users WHERE email = :email AND password = :password',
 			{
 				replacements: {
-					email: email,
-					password: password,
+					email,
+					password,
 				},
 				type: QueryTypes.SELECT,
 			}
@@ -28,11 +28,11 @@ router.post('/', async (req, res) => {
                 admin es ${is_admin}
             `);
 			const token = generateToken(login[0]);
-			res.send(token);
+			res.send({ token });
 		}
 	} catch (err) {
 		console.log(err);
-		res.status(500).send('Error al intentar ingresar');
+		res.status(404).send('Error al intentar ingresar');
 	}
 });
 

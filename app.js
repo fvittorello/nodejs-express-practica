@@ -61,6 +61,14 @@ app.get('/participantes', (req, res) => {
 	res.status(200).send(participantes.getParticipantes());
 });
 
+//	General Error Handler
+app.use((err, req, res, next) => {
+	if (!err) return next();
+	console.log('An error has occurred', err);
+	res.status(500).json(err.message);
+	throw err;
+});
+
 //Inicio servidor
 // app.listen(3000, () => {
 // 	console.log('Servidor iniciado!');
