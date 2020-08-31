@@ -1,28 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Workshop</title>
-</head>
-<body>
-    <h1 class="titulo">Evento de tecnologia 2020</h1>
-    <section class="seccion_1">
-   <p class="asistir">Para asistir ingresate</p>
-   <button id="boton_ingresar" class="button-registrarse">Registrate</button>
-</section>
-<section class="formulario">
-<form id="form-registrarse" class="hidden">
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" name="fname">
-    <label for="Email">Email:</label>
-    <input type="Email" id="Email" name="Email">
-    <input id="submit-user" type="submit" value="Submit">
-</form>
-</section>
-  
-    <script src="index.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logos/favicon.ico" />
+		<title>Tecnopelis</title>
+	</head>
+	<body>
+		<nav>
+			<ul class="nav-bar">
+				<li><a href="#">Tecnopelis 2020</a></li>
+				<li><a href="#conf-section">Conferencias</a></li>
+				<li><a href="#speakers-section">Oradores</a></li>
+				<li><a href="./admin.html">Ingresar</a></li>
+			</ul>
+		</nav>
+		<section id="home-section" class="home-section">
+			<div class="cover-container d-flex p-3 flex-column">
+				<main role="main" class="inner cover container-lg">
+					<h1 class="cover-heading">Tecnopelis 2020</h1>
+					<p class="lead">
+						Tecnopelis is the first international event focused on the entire Node.js ecosystem. It’s a non-profit
+						event, where our attendees will be sharing in an environment of inclusion and respect, having access to
+						relevant information through talks, workshops, and great experiences with the Argentinian Node community.
+					</p>
+					<p class="lead">
+						<a href="#register-section" class="btn btn-lg btn-secondary">Registrate</a>
+					</p>
+				</main>
+			</div>
+		</section>
 
-</body>
+		<section id="conf-section" class="conf-section">
+			<div class="container">
+				<h2>Titulo de conferencias</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident harum voluptate illum ad
+					exercitationem? Numquam assumenda architecto sint alias velit iusto nemo praesentium delectus? Voluptatum
+					corporis excepturi enim totam.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident harum voluptate illum ad
+					exercitationem? Numquam assumenda architecto sint alias velit iusto nemo praesentium delectus? Voluptatum
+					corporis excepturi enim totam.
+				</p>
+			</div>
+		</section>
+
+		<section id="speakers-section" class="container-fluid tb30">
+			<div class="row justify-content-center">
+				<div class="col-lg-2 text-center">
+					<svg
+						class="bd-placeholder-img rounded-circle"
+						width="140"
+						height="140"
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="xMidYMid slice"
+						focusable="false"
+						role="img"
+						aria-label="Placeholder: 140x140"
+					>
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#777"></rect>
+						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+					</svg>
+					<h2>Heading</h2>
+					<p>
+						Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+						vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+						magna.
+					</p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+				</div>
+
+				<div class="col-lg-2 text-center">
+					<svg
+						class="bd-placeholder-img rounded-circle"
+						width="140"
+						height="140"
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="xMidYMid slice"
+						focusable="false"
+						role="img"
+						aria-label="Placeholder: 140x140"
+					>
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#777"></rect>
+						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+					</svg>
+					<h2>Heading</h2>
+					<p>
+						Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+						consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+						nibh.
+					</p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+				</div>
+
+				<div class="col-lg-2 text-center">
+					<svg
+						class="bd-placeholder-img rounded-circle"
+						width="140"
+						height="140"
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="xMidYMid slice"
+						focusable="false"
+						role="img"
+						aria-label="Placeholder: 140x140"
+					>
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#777"></rect>
+						<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+					</svg>
+					<h2>Heading</h2>
+					<p>
+						Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
+						felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+						massa justo sit amet risus.
+					</p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+				</div>
+			</div>
+		</section>
+
+		<section id="register-section" class="register-section justify-content-center">
+			<form id="form-registrarse" class="login-form">
+				<div class="form-group">
+					<label for="firstname_input">Nombre</label>
+					<input type="text" class="form-control" id="firstname_input" placeholder="Pepe" />
+				</div>
+
+				<div class="form-group">
+					<label for="lastname_input">Apellido</label>
+					<input type="text" class="form-control" id="lastname_input" placeholder="Perez" />
+				</div>
+
+				<div class="form-group">
+					<label for="email_input">Email</label>
+					<input
+						type="email"
+						class="form-control"
+						id="email_input"
+						placeholder="pepe@mail.com"
+						aria-describedby="emailHelp"
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="password_input">Contraseña</label>
+					<input type="password" class="form-control" id="password_input" placeholder="********" />
+				</div>
+
+				<button type="submit" id="submit_user" class="btn btn-primary">Enviar</button>
+			</form>
+		</section>
+
+		<footer class="text-center">
+			<div class="inner">
+				<p>
+					Tecnopelis 2020
+				</p>
+			</div>
+		</footer>
+
+		<script src="./vendors/js/jquery.min.js"></script>
+		<script src="./vendors/js/bootstrap.bundle.min.js"></script>
+		<script src="index.js"></script>
+	</body>
 </html>
